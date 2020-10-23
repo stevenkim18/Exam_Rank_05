@@ -1,0 +1,35 @@
+ASpell.hpp/cpp
+ㄴFwoosh ("Fwoosh", "fwooshed")
+
+ATarget.hpp/cpp
+ㄴDummy.hpp/cpp ("Dummy Practice")
+
+Write a class ASpell with coplien form
+1. attributes
+	name(string)
+	effects(string)
+2. methods
+	getters
+	launch() with ATarget param ref, call getHitBySpell inside of it.
+	clone() pure virtual function, return ASpell pointer.
+
+Write a class ATarget with coplien form
+1. attributes
+	type(string)
+2. methods
+	getters
+	getHitBySpell() ASpell param ref -> [type] has been [spell's effects]
+	clone() pure virtual function
+
+Fwoosh
+	inherit ASpell
+	("Fwoosh", "fwooshed")
+
+Dummy
+	inherit ATarget
+	("Dummy Practice")
+
+change Warlock class
+	learnSpell with ASpell pointer param
+	forgetSpell(spellname);
+	launchSpell(spellname, target)

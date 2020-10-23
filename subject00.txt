@@ -1,0 +1,21 @@
+Write class Warlock with coplien form
+1. attribute
+	name (string)
+	title (string)
+
+2. methods
+	Warlock(std::string const &name, std::string const &title);
+	-> name: What a boring day
+	~Warlock()
+	-> name: My job here is done!
+	getName
+	getTitle
+	setTitle
+	introduce
+	-> <name>: My name is <name>, <title>!
+
+3. caution
+Warlock warlock; // doesn't compile
+Warlock richard("Richard", "Master of the Universe");
+Warlock warlock(richard); // deoesn't compile
+Warlock warlock = richard; // doesn't compile
