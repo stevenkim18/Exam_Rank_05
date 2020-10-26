@@ -16,5 +16,5 @@ int main(void)
 
 	w.forgetSpell("Fwoosh");
 	w.launchSpell("Fwoosh", d);
-	
+
 }

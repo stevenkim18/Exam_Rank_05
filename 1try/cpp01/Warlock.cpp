@@ -9,6 +9,9 @@ Warlock::Warlock(std::string const &name, std::string const &title)
 Warlock::~Warlock()
 {
 	std::cout << this->name << ": My job here is done!" << std::endl;
+	std::vector<ASpell*>::iterator it;
+	for(; it != this->spells.end(); it++)
+		delete *it;
 }
 
 std::string const &Warlock::getName() const
