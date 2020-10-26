@@ -1,0 +1,41 @@
+ASpell
+ㄴFireball ("Fireball", "burnt to a crisp")
+ㄴFwoosh ("Fwoosh", "fwooshed")
+ㄴPolymorph ("Polymorph", "turned to a sheep")
+
+ATarget
+ㄴBrickWall ("BrickWall Practice")
+ㄴDummy ("Dummy Practice")
+
+SpellBook with coplin form, but copy/assignation should not work.
+1. attribute
+	std::vector<ASpell*> spells
+2. methods
+	void learnSpell(ASpell *spell)
+	void forgetSpell(std::string const &spellName)
+	ASpell *generateSpell(std::string const &spellName)
+	-> return spell pointer
+
+TargetGenerator, but copy/assignation should not work.
+1. attribute
+	std::vector<ATarget*> targets
+2. methods
+	void learnTargetType(ATarget *target);
+	void forgetTargetType(std::string const &type);
+	ATarget *createTarget(std::string const &type);
+
+
+Warlock
+1. attribute
+	name
+	title
+	SpellBook spellBook
+
+2. methods
+	learnSpell
+	- call spellBook's learnSpell
+	forgetSpell
+	- call spellBook's forgetSpell
+	launchSpell
+	- call spellBook's generateSpell
+	- launch spell
