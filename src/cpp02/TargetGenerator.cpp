@@ -15,8 +15,8 @@ void TargetGenerator::learnTargetType(ATarget *target)
 {
 	if (target)
 	{
-		for (std::vector<ATarget*>::iterator it = targets.begin();
-			it != targets.end(); ++it)
+		std::vector<ATarget*>::iterator it = targets.begin();
+		for (; it != targets.end(); ++it)
 		{
 			if ((*it)->getType() == target->getType())
 				return ;
